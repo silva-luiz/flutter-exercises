@@ -1,4 +1,4 @@
-import 'package:first_project/difficulty.dart';
+import 'package:first_project/components/difficulty.dart';
 import 'package:flutter/material.dart';
 
 class Task extends StatefulWidget {
@@ -47,7 +47,7 @@ class _TaskState extends State<Task> {
                       height: 120,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(4),
-                        child: Image.network(
+                        child: Image.asset(
                           widget.pic,
                           fit: BoxFit.cover,
                         ),

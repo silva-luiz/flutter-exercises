@@ -1,4 +1,4 @@
-import 'package:first_project/task.dart';
+import 'package:first_project/components/task.dart';
 import 'package:flutter/material.dart';
 
 class InitialScreen extends StatefulWidget {
@@ -25,20 +25,21 @@ class _InitialScreenState extends State<InitialScreen> {
             children: const [
               Task(
                   "Aprender Flutter",
-                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                  'assets/images/image01.jpeg',
                   3),
               Task(
                   "Aprender Dart",
-                  'https://images.unsplash.com/photo-1594652634010-275456c808d0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                  'assets/images/image02.png',
                   2),
               Task(
                   "Aprender Git",
-                  'https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?q=80&w=1443&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                  'assets/images/image03.png',
                   3),
               Task(
                   "Aprender BackEnd",
-                  'https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                  'assets/images/image04.jpg',
                   5),
+                  SizedBox(height: 80,),
             ],
           ),
         ),
