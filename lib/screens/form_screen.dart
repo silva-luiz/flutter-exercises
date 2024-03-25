@@ -1,7 +1,10 @@
+import 'package:first_project/data/task_inherited.dart';
 import 'package:flutter/material.dart';
 
 class FormScreen extends StatefulWidget {
-  const FormScreen({super.key});
+  const FormScreen({required this.taskContext, super.key});
+
+  final BuildContext taskContext;
 
   @override
   State<FormScreen> createState() => _FormScreenState();
@@ -27,7 +30,7 @@ class _FormScreenState extends State<FormScreen> {
         body: Center(
           child: SingleChildScrollView(
             child: Container(
-              height: 850,
+              height: 830,
               width: 475,
               decoration: BoxDecoration(
                 color: Colors.black12,
@@ -44,6 +47,7 @@ class _FormScreenState extends State<FormScreen> {
                             if (value != null && value.isEmpty) {
                               return 'Insira o nome da tarefa';
                             }
+                            return null;
                           },
                           controller: nameController,
                           decoration: const InputDecoration(
@@ -114,13 +118,18 @@ class _FormScreenState extends State<FormScreen> {
                     ElevatedButton(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            print(nameController.text);
-                            print(int.parse(difficultyController.text));
-                            print(imageController.text);
+                            TaskInherited.of(widget.taskContext).newTask(
+                                nameController.text,
+                                imageController.text,
+                                int.parse(difficultyController.text));
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text("Salvando sua tarefa!")));
+                            Navigator.pop(context);
                           }
                         },
                         child: const Text(
-                          "Press here to test",
+                          "Salvar Tarefa",
                         )),
                   ]),
             ),
