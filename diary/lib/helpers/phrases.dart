@@ -3,12 +3,12 @@ import 'dart:math';
 /// Cria uma frase aleatória
 String getRandomPhrase() {
   List<String> phrases = [
-    "Hoje estou feliz pois fez Sol",
-    "Não estou tão bem, choveu",
-    "Hoje estudei bastante Flutter!",
-    "Respondi a dúvida de uma pessoa no Fórum da Alura, que legal!",
-    "Entrei na comunidade da Alura no Discord!",
-    "Hoje conversei com uma pessoa que também está estudando Flutter!"
+    "Hoje estou triste, pois caí de Elo",
+    "Não estou tão bem, tomei restrição de chat",
+    "Hoje estudei bastante controle de Wave!",
+    "Dei TrashTalk no chat hoje, que legal!",
+    "Hoje consegui sair do Prata, finalmente!",
+    "Hoje carreguei meu time jogando de Shaco AP! Uau!"
   ];
 
   Random rng = Random();
