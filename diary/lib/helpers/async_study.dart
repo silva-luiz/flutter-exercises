@@ -1,3 +1,4 @@
+/*
 import 'dart:math';
 
 asyncStudy() {
@@ -57,3 +58,4 @@ Future<int> getRandomInt(int time) async {
 
   return rng.nextInt(10);
 }
+*/
